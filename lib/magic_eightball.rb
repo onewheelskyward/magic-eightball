@@ -1,7 +1,7 @@
 class MagicEightball
-  @options = [:yes, :maybe, :no]
+  @@options = [:yes, :maybe, :no]
 
-  @eight_ball = {yes: ['It is certain',
+  @@eight_ball = {yes: ['It is certain',
                       'It is decidedly so',
                       'Without a doubt',
                       'Yes definitely',
@@ -22,13 +22,13 @@ class MagicEightball
                      'Outlook not so good',
                      'Very doubtful']}
 
-  def shake
-    @eight_ball[@options.sample].sample
+  def self.shake
+    @@eight_ball[@@options.sample].sample
   end
 
-  def reply(option)
-    if @options.include? option
-      @eight_ball[option].sample
+  def self.reply(option)
+    if @@options.include? option
+      @@eight_ball[option].sample
     end
   end
 end

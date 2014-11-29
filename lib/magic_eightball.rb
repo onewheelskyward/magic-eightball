@@ -1,4 +1,13 @@
 class MagicEightball
+  # Spread the Magic Eightball(tm) love across the world.
+  #
+  # Example:
+  #   >> MagicEightball.shake
+  #   => It is decidedly so
+  #   >> MagicEightball.reply(:maybe)
+  #   => Ask again later
+  #
+
   @@options = [:yes, :maybe, :no]
 
   @@eight_ball = {yes: ['It is certain',
